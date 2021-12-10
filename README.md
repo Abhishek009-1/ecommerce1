@@ -6,6 +6,8 @@ Web Technologies used: HTML, CSS, JS, Bootstrap
 
 IDE: VS-Code
 
+Note: Bot is deployed on contact page
+
 Industry*:
 Lifestyle
 
