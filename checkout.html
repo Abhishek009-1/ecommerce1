@@ -28,7 +28,7 @@
             <nav class="navbar navbar-expand-lg navbar-light py-3  " style="background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);">
                 <a class="navbar-brand pl-5" href="javascript:;">
-                     <img src="/images/new23.png" class="img img-fluid" width="50px" alt="logo">
+                     <img src="images/new23.png" class="img img-fluid" width="50px" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -97,13 +97,16 @@
                         <div class="card-body">
                             <h5 class="mb-5">Billing details</h5>
                             <!-- Grid row -->
+                            <form>
                             <div class="row">
                                 <!-- Grid column -->
+                                
                                 <div class="col-lg-6">
+                                	
                                     <!-- First name -->
                                     <div class="form-group mb-0 mb-lg-4">
                                         <label for="firstName">First name</label>
-                                        <input type="text" id="firstName" class="form-control mb-0 mb-lg-2">
+                                        <input type="text" id="firstName" class="form-control mb-0 mb-lg-2" required>
                                     </div>
                                 </div>
                                 <!-- Grid column -->
@@ -182,7 +185,9 @@
                                     <i class="fa fa-check mr-2"></i>Purchase
                                 </a>
                             </div>
+                        
                         </div>
+                        </form>
                     </div>
                     <!-- Card -->
                 </div>
@@ -198,14 +203,14 @@
                                 <li
                                     class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
                                     <span>Product name 1</span>
-                                    <span>x2</span>
-                                    <span>₹25.98</span>
+                                    <span class="count">2</span>
+                                    <span class="price">₹17.98</span>
                                 </li>
                                 <li
                                     class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
                                     <span>Product name 2</span>
-                                    <span>x2</span>
-                                    <span>₹25.98</span>
+                                    <span class="count">2</span>
+                                    <span class="price">₹35.99</span>
                                 </li>
                                 <li
                                     class="list-group-item d-flex justify-content-between align-items-center border-top px-0 mb-3">
@@ -215,7 +220,7 @@
                                             <p class="mb-0">(including VAT)</p>
                                         </strong>
                                     </div>
-                                    <span><strong>₹53.98</strong></span>
+                                    <span class="total"><strong>₹53.98</strong></span>
                                 </li>
                             </ul>
                         </div>
@@ -236,7 +241,7 @@
                 <div class="row">
                     <div class="col-md-3 col-6 pl-5">
                         <div class="footer_title">
-                             <img src="/images/new23.png" class="img img-fluid" width="150px" alt="logo">
+                             <img src="images/new23.png" class="img img-fluid" width="150px" alt="logo">
                         </div>
                         <div>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, totam est illum ipsum
@@ -298,7 +303,19 @@
     </div>
     <!-- ==============footer ends here============== -->
 
-
+     <script>
+     	var y = document.querySelectorAll(".count"); 
+         
+         var price = document.querySelectorAll(".price");
+         var total = document.querySelector(".total");
+         price[0].innerHTML = sessionStorage.getItem("price1");
+         price[1].innerHTML = sessionStorage.getItem("price2");
+         y[0].innerHTML = sessionStorage.getItem("count1");
+         y[1].innerHTML = sessionStorage.getItem("count2");
+         total.innerHTML = sessionStorage.getItem("total");
+         
+         
+     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
