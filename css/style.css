@@ -68,7 +68,7 @@
 /* for services section background gradient */
 .feature{
     background: rgb(0,121,230);
-    background: linear-gradient(0deg, rgb(230, 0, 180) 0%, rgb(72, 255, 0) 90%);
+    background: linear-gradient(0deg, #F962FF, #69FF8A);
 }
 
 /* for footer section background gradient */
